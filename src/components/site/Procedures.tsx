@@ -108,6 +108,7 @@ export const Procedures = () => {
           starts to the right of the "PROCEDURI" label, sweeps down the left side past card 1,
           loops under all three cards, climbs up the right side around card 3, then curves
           down and points UP toward the CTA button. Uses dash-flow draw-on animation. */}
+     {/* Dashed journey line — Refăcut conform desenului roșu */}
       <svg
         className="pointer-events-none absolute inset-0 w-full h-full hidden lg:block z-[5]"
         viewBox="0 0 1490 1000"
@@ -122,63 +123,29 @@ export const Procedures = () => {
           </linearGradient>
         </defs>
 
-        {/* Faint full-path guide */}
+        {/* Traseul care urmează linia ta roșie */}
         <path
-          d="M 430 145
-             C 320 160, 200 200, 165 280
-             C 130 360, 140 440, 175 500
-             C 210 560, 240 630, 230 700
-             C 220 770, 280 830, 380 850
-             C 500 870, 650 870, 800 855
-             C 950 840, 1100 830, 1230 815
-             C 1340 800, 1410 720, 1395 600
-             C 1380 480, 1330 380, 1240 340
-             C 1160 305, 1090 320, 1050 360
-             C 1010 400, 1010 460, 1060 500
-             C 1130 555, 1240 580, 1310 640
-             C 1380 700, 1390 800, 1300 870
-             C 1210 920, 1050 935, 900 920
-             C 830 912, 790 905, 770 895"
-          stroke="hsl(var(--accent))"
-          strokeOpacity="0.12"
-          strokeWidth="2"
-          strokeDasharray="6 8"
-          strokeLinecap="round"
-        />
-
-        {/* Animated draw-on path (same geometry) */}
-        <path
-          d="M 430 145
-             C 320 160, 200 200, 165 280
-             C 130 360, 140 440, 175 500
-             C 210 560, 240 630, 230 700
-             C 220 770, 280 830, 380 850
-             C 500 870, 650 870, 800 855
-             C 950 840, 1100 830, 1230 815
-             C 1340 800, 1410 720, 1395 600
-             C 1380 480, 1330 380, 1240 340
-             C 1160 305, 1090 320, 1050 360
-             C 1010 400, 1010 460, 1060 500
-             C 1130 555, 1240 580, 1310 640
-             C 1380 700, 1390 800, 1300 870
-             C 1210 920, 1050 935, 900 920
-             C 830 912, 790 905, 770 895"
+          id="main-journey-path"
+          d="M 450 145 
+             C 100 145, 50 350, 100 500 
+             C 150 650, 300 850, 750 880"
           stroke="url(#journey-line)"
           strokeWidth="2.5"
           strokeLinecap="round"
-          strokeDasharray="8 10"
+          strokeDasharray="8 12"
           className="animate-dash-flow"
         />
 
-        {/* Arrow head pointing UP toward the CTA button (positioned at end of path) */}
-        <g className="animate-arrow-pulse origin-center">
+        {/* Capul de săgeată poziționat la finalul drumului, deasupra butonului */}
+        <g transform="translate(750, 880) rotate(-10)">
           <path
-            d="M 758 905 L 770 893 L 782 905"
+            d="M -10 10 L 0 0 L 10 10"
             stroke="hsl(var(--primary))"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
             fill="none"
+            className="animate-arrow-pulse"
           />
         </g>
       </svg>
