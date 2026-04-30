@@ -25,15 +25,12 @@ const procedures = [
 export const Procedures = () => {
   return (
     <section id="proceduri" className="scroll-reveal py-24 lg:py-32 bg-cream/40 relative overflow-hidden">
-      {/* Decorative animated background — floating orbs + drifting gradient blobs.
-          Positioned in corners/edges only, never under the heading or paragraph text. */}
+      {/* Decorative animated background — floating orbs + drifting gradient blobs. */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden hidden lg:block z-0" aria-hidden="true">
-        {/* Soft drifting gradient blobs */}
         <div className="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-primary/15 via-accent/10 to-transparent blur-3xl animate-blob-drift" />
         <div className="absolute -bottom-32 -left-24 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-accent/15 via-primary/10 to-transparent blur-3xl animate-blob-drift-slow" />
 
-        {/* Floating blue orbs — varied blue shades, kept away from heading text (right column + bottom strip) */}
-        {/* Top-right cluster */}
+        {/* Floating blue orbs cluster */}
         <span className="absolute top-[10%] right-[6%] w-2.5 h-2.5 rounded-full animate-float-y" style={{ background: "hsl(200 85% 55%)", boxShadow: "0 0 18px hsl(200 85% 60% / 0.7)" }} />
         <span className="absolute top-[22%] right-[14%] w-2 h-2 rounded-full animate-float-y-slow" style={{ background: "hsl(212 75% 45%)", animationDelay: "0.5s" }} />
         <span className="absolute top-[6%] right-[22%] w-1.5 h-1.5 rounded-full animate-float-y" style={{ background: "hsl(188 70% 50%)", animationDelay: "1.1s" }} />
@@ -54,12 +51,9 @@ export const Procedures = () => {
         <span className="absolute bottom-[20%] right-[6%] w-1.5 h-1.5 rounded-full animate-float-y" style={{ background: "hsl(188 70% 45%)", animationDelay: "1.7s" }} />
         <span className="absolute bottom-[34%] right-[14%] w-2 h-2 rounded-full animate-float-y-slow" style={{ background: "hsl(212 75% 40%)", animationDelay: "0.6s" }} />
 
-        {/* Subtle animated rings */}
         <span className="absolute top-[18%] right-[4%] w-24 h-24 rounded-full border border-primary/15 animate-pulse-ring" />
         <span className="absolute bottom-[22%] right-[6%] w-16 h-16 rounded-full border border-accent/20 animate-pulse-ring" style={{ animationDelay: "1.4s" }} />
 
-        {/* Animated nose silhouette — top-right empty corner.
-            Two paths cross-fade: a "before" profile (with bump) morphs into a refined "after" profile. */}
         <div className="absolute top-8 right-10 xl:right-16 w-44 h-44 xl:w-52 xl:h-52">
           <svg viewBox="0 0 200 200" className="w-full h-full text-primary/70" fill="none" aria-hidden="true">
             <defs>
@@ -72,30 +66,9 @@ export const Procedures = () => {
                 <stop offset="100%" stopColor="hsl(200 85% 60%)" stopOpacity="0" />
               </radialGradient>
             </defs>
-
-            {/* Soft glow halo behind the nose */}
             <circle cx="100" cy="100" r="80" fill="url(#nose-glow)" className="animate-pulse-ring origin-center" />
-
-            {/* "Before" profile — with a slight bump on the bridge */}
-            <path
-              d="M 70 30 C 78 55, 70 75, 95 95 C 115 110, 130 118, 128 135 C 126 150, 110 160, 90 158"
-              stroke="url(#nose-stroke)"
-              strokeWidth="3"
-              strokeLinecap="round"
-              fill="none"
-              className="animate-nose-before"
-            />
-            {/* "After" profile — clean, refined line */}
-            <path
-              d="M 72 32 C 82 60, 78 82, 100 100 C 118 114, 130 122, 126 138 C 122 152, 108 160, 90 158"
-              stroke="url(#nose-stroke)"
-              strokeWidth="3"
-              strokeLinecap="round"
-              fill="none"
-              className="animate-nose-after"
-            />
-
-            {/* Sparkle dots that swirl around the nose */}
+            <path d="M 70 30 C 78 55, 70 75, 95 95 C 115 110, 130 118, 128 135 C 126 150, 110 160, 90 158" stroke="url(#nose-stroke)" strokeWidth="3" strokeLinecap="round" fill="none" className="animate-nose-before" />
+            <path d="M 72 32 C 82 60, 78 82, 100 100 C 118 114, 130 122, 126 138 C 122 152, 108 160, 90 158" stroke="url(#nose-stroke)" strokeWidth="3" strokeLinecap="round" fill="none" className="animate-nose-after" />
             <circle cx="140" cy="60" r="2.5" fill="hsl(200 85% 60%)" className="animate-float-y" />
             <circle cx="155" cy="100" r="2" fill="hsl(188 70% 50%)" className="animate-float-y-slow" style={{ animationDelay: "0.6s" }} />
             <circle cx="135" cy="160" r="2.5" fill="hsl(195 90% 65%)" className="animate-float-y" style={{ animationDelay: "1.2s" }} />
@@ -104,11 +77,7 @@ export const Procedures = () => {
         </div>
       </div>
 
-      {/* Dashed red journey line — follows the exact path drawn on the reference image:
-          starts to the right of the "PROCEDURI" label, sweeps down the left side past card 1,
-          loops under all three cards, climbs up the right side around card 3, then curves
-          down and points UP toward the CTA button. Uses dash-flow draw-on animation. */}
-     {/* Dashed journey line — Refăcut conform desenului roșu */}
+      {/* Dashed journey line — Refăcut conform desenului roșu */}
       <svg
         className="pointer-events-none absolute inset-0 w-full h-full hidden lg:block z-[5]"
         viewBox="0 0 1490 1000"
@@ -123,12 +92,12 @@ export const Procedures = () => {
           </linearGradient>
         </defs>
 
-        {/* Traseul care urmează linia ta roșie */}
+        {/* Traseul care urmează fidel linia ta roșie */}
         <path
           id="main-journey-path"
-          d="M 450 145 
-             C 100 145, 50 350, 100 500 
-             C 150 650, 300 850, 750 880"
+          d="M 230 95 
+             C 50 95, 20 350, 80 550 
+             C 120 700, 200 850, 280 780"
           stroke="url(#journey-line)"
           strokeWidth="2.5"
           strokeLinecap="round"
@@ -136,11 +105,11 @@ export const Procedures = () => {
           className="animate-dash-flow"
         />
 
-        {/* Capul de săgeată poziționat la finalul drumului, deasupra butonului */}
-        <g transform="translate(750, 880) rotate(-10)">
+        {/* Capul de săgeată poziționat la finalul drumului, indicând spre primul card */}
+        <g transform="translate(280, 780) rotate(160)">
           <path
-            d="M -10 10 L 0 0 L 10 10"
-            stroke="hsl(var(--primary))"
+            d="M -8 8 L 0 0 L 8 8"
+            stroke="url(#journey-line)"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -170,8 +139,13 @@ export const Procedures = () => {
             const cardClasses =
               "group relative p-8 rounded-2xl bg-card border border-border/60 hover:border-primary/25 hover:shadow-elegant transition-all duration-500 block h-full hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
-            const inner = (
-              <>
+            return (
+              <Link
+                key={p.title}
+                to={`/proceduri#${p.slug}`}
+                className={cardClasses + " relative z-10"}
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
                 <div className="w-12 h-12 rounded-xl bg-gradient-primary text-primary-foreground flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-500">
                   <Icon className="w-5 h-5" />
                 </div>
@@ -185,68 +159,12 @@ export const Procedures = () => {
                   <span className="leading-snug">Detalii</span>
                   <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </div>
-              </>
-            );
-
-            return (
-              <Link
-                key={p.title}
-                to={`/proceduri#${p.slug}`}
-                className={cardClasses + " relative z-10"}
-                style={{ animationDelay: `${i * 60}ms` }}
-              >
-                {inner}
               </Link>
             );
           })}
         </div>
 
         <div className="relative mt-20 flex flex-col items-center text-center z-10">
-          {/* Compact arrow for tablet & mobile */}
-          <svg
-            width="120"
-            height="70"
-            viewBox="0 0 120 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-accent mb-2 opacity-80 lg:hidden w-20 h-12 sm:w-28 sm:h-16"
-            aria-hidden="true"
-          >
-            <defs>
-              <linearGradient id="arrow-shimmer-mobile" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
-                <stop offset="45%" stopColor="currentColor" stopOpacity="0" />
-                <stop offset="50%" stopColor="hsl(var(--primary-glow))" stopOpacity="1" />
-                <stop offset="55%" stopColor="currentColor" stopOpacity="0" />
-                <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
-                <animate attributeName="x1" values="-1;1" dur="2.4s" repeatCount="indefinite" />
-                <animate attributeName="x2" values="0;2" dur="2.4s" repeatCount="indefinite" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M5 10 Q 25 35, 45 18 T 90 30 L 90 55"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              fill="none"
-              strokeDasharray="3 4"
-            />
-            <path
-              d="M5 10 Q 25 35, 45 18 T 90 30 L 90 55"
-              stroke="url(#arrow-shimmer-mobile)"
-              strokeWidth="3"
-              strokeLinecap="round"
-              fill="none"
-            />
-            <path
-              d="M83 48 L 90 58 L 97 48"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-            />
-          </svg>
           <Link
             to="/proceduri"
             className="group inline-flex items-center gap-2 px-7 h-12 rounded-full bg-primary text-primary-foreground text-sm font-medium shadow-elegant hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow"
